@@ -25,6 +25,7 @@ package {
 
 cc_library_static {
     name: "libdisplayservicehidl",
+    compile_multilib: "32",
 
     srcs: [
         "DisplayService.cpp",
@@ -37,9 +38,6 @@ cc_library_static {
         "libgui",
         "libhidlbase",
         "libutils",
-    ],
-
-    static_libs: [
         "android.frameworks.displayservice@1.0",
     ],
 
@@ -47,9 +45,6 @@ cc_library_static {
     export_shared_lib_headers: [
         "libgui",
         "libutils",
-    ],
-
-    export_static_lib_headers: [
         "android.frameworks.displayservice@1.0",
     ],
 
